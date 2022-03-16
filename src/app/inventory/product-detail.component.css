@@ -1,0 +1,19 @@
+table tr{
+    border: 0px;
+}
+table thead{
+    color:darkred;
+    font-size:large;
+    font-weight: bold;
+    text-align: center;
+}
+table{ 
+    width:40%; 
+    margin-left:10px;
+    float:left
+}
+img
+{
+    float:right;
+    margin-right:10px;
+}

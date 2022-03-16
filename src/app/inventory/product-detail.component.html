@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header" >
+        {{pageTitle}}
+    </div>
+    <div class="table-responsive" *ngFor="let product of selectedProduct">
+        <table class="table" *ngIf="product.productId == id">
+            <thead>
+                <tr>
+                    <th colspan="2">Product Information</th>
+                </tr>
+            </thead>
+            <tr>
+                <th>Product Name</th><td>{{product?.productName}}</td>
+            </tr>
+            <tr>
+                <th>Product Brand</th><td>{{product?.productBrand}}</td>
+            </tr>
+            <tr>
+                <th>Product Type</th><td>{{product?.productType}}</td>
+            </tr>
+            <tr>
+                <th>Serial Number</th><td>{{product?.serialNumber}}</td>
+            </tr>
+            <tr>
+                <th>Conditiion</th><td><im-star [condition]="product.condition"></im-star></td>
+            </tr>
+        </table>
+        <table class="table"  *ngIf="product.productId == id">
+            <thead>
+                <tr>
+                    <th colspan="2">User Information</th>
+                </tr>
+            </thead>
+            <tr>
+                <th>Owners Name</th><td>{{product?.productOwner}}</td>
+            </tr>
+            <tr>
+                <th>Company</th><td>{{product?.company}}</td>
+            </tr>
+            <tr>
+                <th>Department</th><td>{{product?.department}}</td>
+            </tr>
+            <tr>
+                <th>Location</th><td>{{product?.location}}</td>
+            </tr>
+            <tr>
+                <th>Date Issued</th><td>{{product?.dateIssued}}</td>
+            </tr>
+        </table>
+        <img [src]="product?.productImage" [title]="product?.productName" [style.width.px]="imageWidth" [style.margin.px]="imageMargin"  *ngIf="product.productId == id">
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-outline-secondary"
+        style="width:80px"
+        (click)="onBack()">
+        <i class="fa fa-chevron-left"></i> Back
+    </button>
+    </div>    
+</div>

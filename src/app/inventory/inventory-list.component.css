@@ -1,0 +1,8 @@
+thead{
+    color:darkred;
+}
+.btn-primary{
+    background-color: darkred;
+    color:white;
+    border-radius: 5px;
+}
